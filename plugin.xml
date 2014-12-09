@@ -3,23 +3,19 @@
     id="com.appgyver.plugin.Echo"
     version="1.0.0">
 
-<<<<<<< HEAD
     <name>EchoPlugin</name>
-=======
-  <name>spoof</name>
->>>>>>> FETCH_HEAD
+  	<name>spoof</name>
 
-  <description>
-    Echo Plugin for Steroids.js
-  </description>
-
+	  <description>
+		Echo Plugin for Steroids.js
+	  </description>
+	
   <asset src="www/EchoPlugin.js" target="plugins/EchoPlugin.js" />
 
   <engines>
     <engine name="cordova" version=">=2.7.0" />
   </engines>
 
-<<<<<<< HEAD
   <!-- android -->
   <platform name="android">
     <config-file target="res/xml/config.xml" parent="plugins">
@@ -29,11 +25,9 @@
     <source-file src="src/android/com/appgyver/plugin/Echo.java"
       target-dir="src/com/appgyver/plugin" />
   </platform>
-=======
   <js-module src="www/spoof.js" name="spoof">
     <clobbers target="window.plugins.spoof" />
   </js-module>
->>>>>>> FETCH_HEAD
 
   <!-- ios -->
   <platform name="ios">
@@ -41,7 +35,6 @@
       <plugin name="Echo" value="Echo" onload="true" />
     </config-file>
 
-<<<<<<< HEAD
     <config-file target="config.xml" parent="/widget">
       <feature name="Echo">
         <param name="ios-package" value="Echo"/>
@@ -52,7 +45,6 @@
     <header-file src="src/ios/Echo.h" />
 
     <source-file src="src/ios/Echo.m" />
-=======
     <config-file target="config.xml" parent="/*">
       <feature name="spoof">
         <param name="ios-package" value="spoof"/>
@@ -62,7 +54,6 @@
     <header-file src="src/spoof.h"/>
     <source-file src="src/spoof.m"/>
   </platform>
->>>>>>> FETCH_HEAD
 
   </platform>
 </plugin>
