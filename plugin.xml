@@ -4,12 +4,11 @@
     version="1.0.0">
 
     <name>EchoPlugin</name>
-  	<name>spoof</name>
 
-	  <description>
-		Echo Plugin for Steroids.js
-	  </description>
-	
+  <description>
+    Echo Plugin for Steroids.js
+  </description>
+
   <asset src="www/EchoPlugin.js" target="plugins/EchoPlugin.js" />
 
   <engines>
@@ -25,9 +24,6 @@
     <source-file src="src/android/com/appgyver/plugin/Echo.java"
       target-dir="src/com/appgyver/plugin" />
   </platform>
-  <js-module src="www/spoof.js" name="spoof">
-    <clobbers target="window.plugins.spoof" />
-  </js-module>
 
   <!-- ios -->
   <platform name="ios">
@@ -45,15 +41,6 @@
     <header-file src="src/ios/Echo.h" />
 
     <source-file src="src/ios/Echo.m" />
-    <config-file target="config.xml" parent="/*">
-      <feature name="spoof">
-        <param name="ios-package" value="spoof"/>
-      </feature>
-    </config-file>
-
-    <header-file src="src/spoof.h"/>
-    <source-file src="src/spoof.m"/>
-  </platform>
 
   </platform>
 </plugin>
