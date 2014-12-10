@@ -1,26 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
-    id="com.appgyver.plugin.Echo"
-    version="1.0.0">
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        id="co.uk.ultimateweb.test"
+        version="1.0.0">
 
-    <name>EchoPlugin</name>
+  <engines>
+    <engine name="cordova" version=">=3.0.0" />
+  </engines>
 
-  <description>
-    Echo Plugin for Steroids.js
-  </description>
+  <name>PluginTest</name>
 
-  <js-module src="www/EchoPlugin.js" name="EchoPlugin">
-    <clobbers target="window.echo" />
+  <description>Plugin Test Base</description>
+
+  <author>Ultimateweb</author>
+
+  <js-module src="www/EchoPlugin.js" name="Echo">
+    <clobbers target="cordova.plugins.echo" />
   </js-module>
 
-  <!-- android -->
-  <platform name="android">
-    <config-file target="res/xml/config.xml" parent="/*">
-      <feature name="EchoPlugin">
-        <param name="android-package" value="com.appgyver.plugin.Echo"/>
+  <!-- iOS -->
+  <platform name="ios">
+    <config-file target="config.xml" parent="/*">
+      <feature name="Echo">
+        <param name="ios-package" value="Echo" />
       </feature>
     </config-file>
 
-    <source-file src="src/android/com/appgyver/plugin/Echo.java" target-dir="src/com/appgyver/plugin" />
+    <header-file src="src/ios/Echo.h" />
+    <source-file src="src/ios/Echo.m" />
   </platform>
+
+  <!-- Android -->
+  <platform name="android">
+    <source-file src="src/android/Echo.java" target-dir="src/co/uk/ultimateweb/test" />
+
+    <config-file target="res/xml/config.xml" parent="/*">
+      <feature name="Echo">
+        <param name="android-package" value="co.uk.ultimateweb.test.Echo" />
+      </feature>
+    </config-file>
+  </platform>
+
 </plugin>
